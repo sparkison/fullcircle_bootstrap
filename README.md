@@ -1,7 +1,7 @@
 # fullcircle_bootstrap
-Wordpress starter theme with Underscores (_s) and Twitter Bootstrap integration.
+Was getting tired of re-creating base theme each time, so this repo was born.
 
-Was getting tired of re-creating base theme each time.
+fullcircle_bootstrap is a Wordpress starter theme with Underscores (_s) and Twitter Bootstrap integration. Also includes the [wp-bootstrap-navwalker](https://github.com/twittem/wp-bootstrap-navwalker) plugin by [twittem](https://github.com/twittem) for easy Bootstrap menu integration.
 
 Still largely a work in progress. Currently implements the Advanced Custom Fields plugin (ACF). Will need to add this ACF plugin to the "**assets/acf**" directory, else remove appropriate section from the **functions.php** file.
 
