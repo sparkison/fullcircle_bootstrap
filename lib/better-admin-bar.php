@@ -74,6 +74,11 @@ if (!class_exists('better_admin_bar')) {
 					#wpadminbar{
 						top: -<?php echo 32 - ((float)$opt['hover_area'] < 5 ? 5 : (float)$opt['hover_area']); ?>px;
 					}
+					@media only screen and (max-width: 782px) {
+						#wpadminbar{
+							top: -<?php echo 46 - ((float)$opt['hover_area'] < 5 ? 5 : (float)$opt['hover_area']); ?>px;
+						}
+					}
 					#wpadminbar:hover{
 						top: 0px;
 					}
