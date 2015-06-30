@@ -21,4 +21,9 @@
   border-radius: 50px;
 }
 
+.comment-reply-link:before {
+  font-family: FontAwesome;
+  content: "\f112\00a0\00a0";
+}
+
 /*# sourceMappingURL=fullcircle_bootstrap.min.css.map */
