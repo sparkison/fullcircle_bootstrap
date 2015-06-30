@@ -1,7 +1,7 @@
 # fullcircle_bootstrap
 Was getting tired of re-creating base theme each time, so this repo was born.
 
-fullcircle_bootstrap is a Wordpress starter theme with Underscores (_s) and Twitter Bootstrap integration. Also includes the [wp-bootstrap-navwalker](https://github.com/twittem/wp-bootstrap-navwalker) plugin by [twittem](https://github.com/twittem) for easy Bootstrap menu integration.
+**fullcircle_bootstrap** is a Wordpress starter theme with [Underscores (_s)](http://underscores.me/) and [Twitter Bootstrap](http://getbootstrap.com/) integration. Also includes the [wp-bootstrap-navwalker](https://github.com/twittem/wp-bootstrap-navwalker) plugin by [twittem](https://github.com/twittem) for easy Bootstrap menu integration.
 
 ![Screenshot](https://raw.githubusercontent.com/sparkison/fullcircle_bootstrap/master/screenshot.jpg)
 
