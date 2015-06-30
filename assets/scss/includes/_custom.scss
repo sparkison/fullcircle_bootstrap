@@ -14,3 +14,14 @@
   0. GENERAL
  * * * * * * * * * * * * * */
 
+// Comments avatar
+.gravatar{
+	display: block;
+	float: left;
+	padding-right: 12px;
+	img{
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+	}
+}

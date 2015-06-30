@@ -1,11 +1,24 @@
-/*!
- * fullcircle_bootstrap
- * 
- * 
- * @author Shaun Parkison at Full Circle Graphics
- * @version 1.2.0
- * Copyright Shaun Parkison @ Full Circle Graphics, www.fullcirclegfx.com
+/* VARIABLES */
+/* END VARIABLES */
+/*
+ *
+ * Sass CSS by Shaun Parkison @ fullcirclegfx.com
+ * 0. General/Global styling
+ * 1. ...
+ *
  */
-
+/* * * * * * * * * * * * * *
+  0. GENERAL
+ * * * * * * * * * * * * * */
+.gravatar {
+  display: block;
+  float: left;
+  padding-right: 12px;
+}
+.gravatar img {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
 
 /*# sourceMappingURL=fullcircle_bootstrap.min.css.map */
