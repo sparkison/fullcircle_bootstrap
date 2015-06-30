@@ -1,7 +1,7 @@
 {
   "name": "fullcircle_bootstrap",
   "version": "1.2.0",
-  "description": "Custom WordPress theme developed for One Tribe Creative by Shaun Parkison. Theme Based off of the _s WordPress theme by Automattion and Bootstrap by Twitter",
+  "description": "Custom WordPress theme developed by Shaun Parkison. Theme Based off of the _s WordPress theme by Automattion and Bootstrap by Twitter",
   "main": "index.php",
   "copyright": "Shaun Parkison @ Full Circle Graphics, www.fullcirclegfx.com",
   "scripts": {
