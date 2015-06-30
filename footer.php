@@ -20,7 +20,7 @@
 					<div class="site-info">
 						<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'fullcircle_bootstrap' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'fullcircle_bootstrap' ), 'WordPress' ); ?></a>
 						<span class="sep"> | </span>
-						<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'fullcircle_bootstrap' ), 'fullcircle_bootstrap', '<a href="http://www.fullcirclegfx.com/" target="_blank" rel="designer">Full Circle Graphics</a>' ); ?>
+						<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'fullcircle_bootstrap' ), '<a href="https://github.com/sparkison/fullcircle_bootstrap" target="_blank">fullcircle_bootstrap</a>', '<a href="http://www.fullcirclegfx.com/" target="_blank" rel="designer">Full Circle Graphics</a>' ); ?>
 					</div><!-- .site-info -->
 				</footer><!-- #colophon -->
 			</div>
