@@ -77,6 +77,7 @@ function fullcircle_bootstrap_setup() {
 
 	/**
 	 *	Style the comment form and comments to match Bootstrap
+	 *	Also includes schema.org microdata
 	 */
 
 	// Custom comment
