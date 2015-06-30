@@ -202,6 +202,11 @@ add_action( 'wp_enqueue_scripts', 'fullcircle_bootstrap_scripts' );
 require_once(get_template_directory() . '/lib/wp_bootstrap_navwalker.php');
 
 /**
+ * Add Better Admin Bar
+ */
+require_once(get_template_directory() . '/lib/better-admin-bar.php');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
