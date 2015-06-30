@@ -77,7 +77,7 @@ function fullcircle_bootstrap_setup() {
 
 	/**
 	 *	Style the comment form and comments to match Bootstrap
-	 *	Also includes schema.org microdata
+	 * 	Also includes schema.org microdata
 	 */
 
 	// Custom comment
@@ -117,11 +117,11 @@ function fullcircle_bootstrap_setup() {
 		<?php 
 	}
 	// Change comment reply link style
-	function replace_reply_link_class($class){
-    	$class = str_replace("class='comment-reply-link", "class='btn btn-sm btn-primary", $class);
+	function custom_comment_reply_link_class($class){
+    	$class = str_replace("class='comment-reply-link", "class='btn btn-sm btn-primary comment-reply-link", $class);
     	return $class;
 	}
-	add_filter('comment_reply_link', 'replace_reply_link_class');
+	add_filter('comment_reply_link', 'custom_comment_reply_link_class');
 	// End custom comment
 	function fullcircle_bootstrap_comment_close() {
 		echo '</article>';
@@ -152,7 +152,7 @@ function fullcircle_bootstrap_setup() {
 	function bootstrap3_comment_form( $args ) {
 	    $args['comment_field'] = '<div class="form-group comment-form-comment">
 	            <label for="comment">' . _x( 'Comment', 'noun' ) . '</label> 
-	            <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+	            <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" width="100%" aria-required="true"></textarea>
 	        </div>';
 	    $args['class_submit'] = 'btn btn-default';
 	    

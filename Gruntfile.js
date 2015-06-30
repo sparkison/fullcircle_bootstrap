@@ -91,7 +91,7 @@
 		      	//timeout    : 1000,
 		      	report       : 'min',
 						urls         : [
-									'http://test.q4wm.dev/'
+									'http://test.SITE_URL.dev/'
 						]
 		    },
 		    files: {
@@ -104,7 +104,7 @@
 			extract : {
 			    outfile : 'css/<%= pkg.name %>.critical.css',
 			    css : 'assets/css/<%= pkg.name %>.min.css',
-			    url : 'http://test.q4wm.dev/',
+			    url : 'http://test.SITE_URL.dev/',
 			    width : 1300,
 			    height : 900
 			},
