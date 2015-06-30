@@ -8,7 +8,7 @@ fullcircle_bootstrap is a Wordpress starter theme with Underscores (_s) and Twit
 Notes
 -----
 
-Still largely a work in progress – this theme implements the Advanced Custom Fields plugin (ACF). You will need to add this ACF plugin to the "**assets/acf**" directory, else remove appropriate section from the **functions.php** file.
+Still largely a work in progress – this theme implements the Advanced Custom Fields plugin ([ACF](http://www.advancedcustomfields.com/)). You will need to add the contents of this plugin to the "**assets/acf**" directory, else remove appropriate section from the **functions.php** file.
 
 Using Grunt for SASS CSS and JS compilation -- Use `sudo npm install` command to get Grunt dependancies installed. Currently have `grunt`, `grunt dist` and `grunt dev` setup. `grunt optimize` will need to be configured on a per project basis. Will basically run the `grunt dist` command, and additionaly generate an "Above the fold" css file and remove any unused css based on the URLs passed. The `uncss` method will need extra classes added to the `ignore` variable if css is being added in after site reander (i.e. via JavaScript).
 
