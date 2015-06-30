@@ -75,7 +75,59 @@ function fullcircle_bootstrap_setup() {
 		'default-image' => '',
 	) ) );
 
-		function bootstrap3_comment_form_fields( $fields ) {
+	/**
+	 *	Style the comment form and comments to match Bootstrap
+	 */
+
+	// Custom comment
+	function fullcircle_bootstrap_comment($comment, $args, $depth) {
+		$GLOBALS['comment'] = $comment;
+		extract($args, EXTR_SKIP);
+		
+		if ( 'article' == $args['style'] ) {
+			$tag = 'article';
+			$add_below = 'comment';
+		} else {
+			$tag = 'article';
+			$add_below = 'comment';
+		}
+
+		?>
+		<<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>" itemscope itemtype="http://schema.org/Comment">
+			<div class="panel panel-default">
+				<div class="comment-meta post-meta panel-heading" role="complementary">
+					<figure class="gravatar circle"><?php echo get_avatar( $comment, 65, '', 'Author’s gravatar' ); ?></figure>
+					<h3 class="comment-author panel-title">
+						<a class="comment-author-link" href="<?php comment_author_url(); ?>" itemprop="author"><?php comment_author(); ?></a>
+					</h3>
+					<time class="comment-meta-item" datetime="<?php comment_date('Y-m-d') ?>T<?php comment_time('H:iP') ?>" itemprop="datePublished"><?php comment_date('jS F Y') ?>, <a href="#comment-<?php comment_ID() ?>" itemprop="url"><?php comment_time() ?></a></time>
+					<?php edit_comment_link('<p class="comment-meta-item">Edit this comment</p>','',''); ?>
+					<?php if ($comment->comment_approved == '0') : ?>
+						<p class="comment-meta-item">Your comment is awaiting moderation.</p>
+					<?php endif; ?>
+				</div>
+			</div>
+			<div class="comment-content post-content panel-body" itemprop="text">
+				<?php comment_text() ?>
+				<div class="comment-reply">
+					<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+				</div>
+			</div>
+		<?php 
+	}
+	// Change comment reply link style
+	function replace_reply_link_class($class){
+    	$class = str_replace("class='comment-reply-link", "class='btn btn-sm btn-primary", $class);
+    	return $class;
+	}
+	add_filter('comment_reply_link', 'replace_reply_link_class');
+	// End custom comment
+	function fullcircle_bootstrap_comment_close() {
+		echo '</article>';
+	}
+
+	// Add bootstrap3 styling to comment form
+	function bootstrap3_comment_form_fields( $fields ) {
 	    $commenter = wp_get_current_commenter();
 	    
 	    $req      = get_option( 'require_name_email' );
@@ -95,17 +147,22 @@ function fullcircle_bootstrap_setup() {
 	}
 	add_filter( 'comment_form_default_fields', 'bootstrap3_comment_form_fields' );
 	
+	// Add bootstrap3 styling to comment form
 	function bootstrap3_comment_form( $args ) {
 	    $args['comment_field'] = '<div class="form-group comment-form-comment">
 	            <label for="comment">' . _x( 'Comment', 'noun' ) . '</label> 
 	            <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </div>';
-	    $args['class_submit'] = 'btn btn-default'; // since WP 4.1
+	    $args['class_submit'] = 'btn btn-default';
 	    
 	    return $args;
 	}
 	add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
-	
+
+	/**
+	 *	End comments styling
+	 */
+
 }
 endif; // fullcircle_bootstrap_setup
 add_action( 'after_setup_theme', 'fullcircle_bootstrap_setup' );
