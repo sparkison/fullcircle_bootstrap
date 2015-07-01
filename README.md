@@ -6,9 +6,9 @@
 Notes
 -----
 
-This theme implements the Advanced Custom Fields plugin ([ACF](http://www.advancedcustomfields.com/)). You will need to add the contents of this plugin to the "**assets/acf**" directory, else remove appropriate section from the **functions.php** file.
+This theme implements the Advanced Custom Fields plugin ([ACF](http://www.advancedcustomfields.com/)). You will need to add the contents of this plugin to the **assets/acf** directory, else remove appropriate section from the **functions.php** file.
 
 Using Grunt for SASS CSS and JS compilation -- use `sudo npm install` command to get Grunt dependancies installed. Currently have `grunt`, `grunt dist` and `grunt dev` setup. `grunt optimize` will need to be configured on a per project basis. Will basically run the `grunt dist` command, and additionaly generate an "Above the fold" css file and remove any unused css based on the URLs passed. The `uncss` method will need extra classes added to the `ignore` variable if css is being added in after site render (i.e. via JavaScript).
 
-- Edit "**custom.js**" file within the "**/assets/js**" folder and issue `grunt dist` commmand to compile into **/assets/js** as **fullcircle_bootstrap.min.js**. 
-- Edit "**_custom.scss**" file within the "**/assets/scss**" folder and issue `grunt dist` commmand to compile into **/assets/css** as **fullcircle_bootstrap.min.css**.
+- Edit **custom.js** file within the **/assets/js** folder and issue `grunt dist` commmand to compile into **/assets/js** as **fullcircle_bootstrap.min.js**. 
+- Edit **_custom.scss** file within the **/assets/scss** folder and issue `grunt dist` commmand to compile into **/assets/css** as **fullcircle_bootstrap.min.css**.
