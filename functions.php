@@ -97,7 +97,7 @@ function fullcircle_bootstrap_setup() {
 		<<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>" itemscope itemtype="http://schema.org/Comment">
 			<div class="panel panel-default">
 				<div class="comment-meta post-meta panel-heading" role="complementary">
-					<figure class="gravatar circle"><?php echo get_avatar( $comment, 65, '', 'Author’s gravatar' ); ?></figure>
+					<figure class="gravatar circle"><?php echo get_avatar( $comment, 38, '', 'Author’s gravatar' ); ?></figure>
 					<h3 class="comment-author panel-title">
 						<a class="comment-author-link" href="<?php comment_author_url(); ?>" itemprop="author"><?php comment_author(); ?></a>
 					</h3>

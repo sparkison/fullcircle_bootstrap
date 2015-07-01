@@ -123,11 +123,11 @@ function fullcircle_bootstrap_entry_footer() {
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'fullcircle_bootstrap' ), esc_html__( '1 Comment', 'fullcircle_bootstrap' ), esc_html__( '% Comments', 'fullcircle_bootstrap' ) );
+		comments_popup_link( '<br/><i class="fa fa-comment-o"></i> ' . esc_html__( 'Leave a comment', 'fullcircle_bootstrap' ), '<br/><i class="fa fa-comment-o"></i> ' . esc_html__( '1 Comment', 'fullcircle_bootstrap' ), '<br/><i class="fa fa-comment-o"></i> ' . esc_html__( '% Comments', 'fullcircle_bootstrap' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( '<i class="fa fa-pencil"></i> ' . esc_html__( 'Edit', 'fullcircle_bootstrap' ), '<br/><span class="edit-link">', '</span>' );
+	edit_post_link( '<i class="fa fa-pencil"></i> ' . esc_html__( 'Edit', 'fullcircle_bootstrap' ), '<br/><br/><span class="edit-link">', '</span>' );
 }
 endif;
 
