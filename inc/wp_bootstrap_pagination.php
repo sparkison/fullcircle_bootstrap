@@ -8,10 +8,10 @@ function wp_bootstrap_pagination( $args = array() ) {
     $defaults = array(
         'range'           => 4,
         'custom_query'    => FALSE,
-        'previous_string' => __( '<i class="glyphicon glyphicon-chevron-left"></i>', 'text-domain' ),
-        'next_string'     => __( '<i class="glyphicon glyphicon-chevron-right"></i>', 'text-domain' ),
-        'before_output'   => '<div class="post-nav"><ul class="pager">',
-        'after_output'    => '</ul></div>'
+        'previous_string' => __( '<i class="fa fa-angle-left"></i>', 'text-domain' ),
+        'next_string'     => __( '<i class="fa fa-angle-right"></i>', 'text-domain' ),
+        'before_output'   => '<div class="post-nav"><div class="container"><div class="row"><div class="col-md-12 text-center"><ul class="pagination">',
+        'after_output'    => '</ul></div></div></div>'
     );
     
     $args = wp_parse_args( 
@@ -54,7 +54,7 @@ function wp_bootstrap_pagination( $args = array() ) {
     
     $firstpage = esc_attr( get_pagenum_link(1) );
     if ( $firstpage && (1 != $page) )
-        $echo .= '<li class="previous"><a href="' . $firstpage . '">' . __( 'First', 'text-domain' ) . '</a></li>';
+        $echo .= '<li class="previous"><a href="' . $firstpage . '">' . __( '<i class="fa fa-angle-double-left"></i>', 'text-domain' ) . '</a></li>';
 
     if ( $previous && (1 != $page) )
         $echo .= '<li><a href="' . $previous . '" title="' . __( 'previous', 'text-domain') . '">' . $args['previous_string'] . '</a></li>';
@@ -75,8 +75,8 @@ function wp_bootstrap_pagination( $args = array() ) {
         $echo .= '<li><a href="' . $next . '" title="' . __( 'next', 'text-domain') . '">' . $args['next_string'] . '</a></li>';
     
     $lastpage = esc_attr( get_pagenum_link($count) );
-    if ( $lastpage ) {
-        $echo .= '<li class="next"><a href="' . $lastpage . '">' . __( 'Last', 'text-domain' ) . '</a></li>';
+    if ( $lastpage && ($count != $page) ) {
+        $echo .= '<li class="next"><a href="' . $lastpage . '">' . __( '<i class="fa fa-angle-double-right"></i>', 'text-domain' ) . '</a></li>';
     }
 
     if ( isset($echo) )
