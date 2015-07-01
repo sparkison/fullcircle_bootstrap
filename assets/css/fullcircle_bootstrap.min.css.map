@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAiBA,SAAS,CACR,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,IAAI,CACX,aAAa,CAAE,IAAI,CACnB,aAAG,CACF,qBAAqB,CAAE,IAAI,CAC3B,kBAAkB,CAAE,IAAI,CACxB,aAAa,CAAE,IAAI,CAIrB,0BAA0B,CACzB,WAAW,CAAE,WAAW,CACxB,OAAO,CAAE,iBAAiB",
+"sources": ["../scss/includes/_custom.scss"],
 "names": [],
 "file": "fullcircle_bootstrap.min.css"
 }

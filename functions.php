@@ -164,6 +164,13 @@ function fullcircle_bootstrap_setup() {
 	 *	End comments styling
 	 */
 
+	//Add class to edit button
+	function custom_edit_post_link_style($output) {
+		$output = str_replace('class="post-edit-link"', 'class="btn btn-primary btn-sm post-edit-link"', $output);
+		return $output;
+	}
+	add_filter('edit_post_link', 'custom_edit_post_link_style');
+
 }
 endif; // fullcircle_bootstrap_setup
 add_action( 'after_setup_theme', 'fullcircle_bootstrap_setup' );

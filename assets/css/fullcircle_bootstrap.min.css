@@ -1,44 +1,11 @@
-/* VARIABLES */
-/* END VARIABLES */
-/*
- *
- * Sass CSS by Shaun Parkison @ fullcirclegfx.com
- * 0. General/Global styling
- * 1. ...
- *
+/*!
+ * fullcircle_bootstrap
+ * 
+ * 
+ * @author Shaun Parkison at Full Circle Graphics
+ * @version 1.2.0
+ * Copyright Shaun Parkison @ Full Circle Graphics, www.fullcirclegfx.com
  */
-/* * * * * * * * * * * * * *
-  0. GENERAL
- * * * * * * * * * * * * * */
-.gravatar {
-  display: block;
-  float: left;
-  padding-right: 12px;
-}
-.gravatar img {
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-}
 
-.comment-reply-link:before {
-  font-family: FontAwesome;
-  content: "\f112\00a0\00a0";
-}
-
-.post-edit-link {
-  padding: 2px 5px 2px 5px;
-  margin: 0 5px 0 5px;
-  border: 1px solid #9f9f9f;
-  text-decoration: none !important;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.post-edit-link:before {
-  font-family: FontAwesome;
-  content: "\f044\00a0\00a0";
-}
-
+.gravatar{display:block;float:left;padding-right:12px}.gravatar img{-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px}.comment-reply-link:before{font-family:FontAwesome;content:"\f112\00a0\00a0"}
 /*# sourceMappingURL=fullcircle_bootstrap.min.css.map */

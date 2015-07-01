@@ -55,10 +55,12 @@ function the_post_navigation() {
 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'fullcircle_bootstrap' ); ?></h2>
 		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
-			?>
+			<nav>
+  				<ul class="pager">
+    				<?php previous_post_link( '<span aria-hidden="true">&larr;</span> <li class="previous">%link</li>', '%title' ); ?>
+    				<?php next_post_link( '<li class="next">%link</li> <span aria-hidden="true">&rarr;</span>', '%title' ); ?>
+  				</ul>
+			</nav>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
@@ -71,9 +73,11 @@ if ( ! function_exists( 'fullcircle_bootstrap_posted_on' ) ) :
  */
 function fullcircle_bootstrap_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
+
+	// Uncomment to display updated date
+	// if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+	// 	$time_string = ' <time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">(Updated %4$s)</time>';
+	// }
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
@@ -107,14 +111,14 @@ function fullcircle_bootstrap_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'fullcircle_bootstrap' ) );
 		if ( $categories_list && fullcircle_bootstrap_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'fullcircle_bootstrap' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"><i class="fa fa-list"></i> ' . esc_html__( 'Posted in: %1$s', 'fullcircle_bootstrap' ) . '</span><br/>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'fullcircle_bootstrap' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'fullcircle_bootstrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-		}
+        $tag_list = get_the_tag_list( '', __( ', ', 'fullcircle_bootstrap' ) );
+        if ( '' != $tag_list ) {
+            printf( '<span class="tags"><i class="fa fa-tag"></i> Tagged: %s</span><br/>', $tag_list );
+        }
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -123,7 +127,7 @@ function fullcircle_bootstrap_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( esc_html__( 'Edit', 'fullcircle_bootstrap' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( '<i class="fa fa-pencil"></i> ' . esc_html__( 'Edit', 'fullcircle_bootstrap' ), '<br/><span class="edit-link">', '</span>' );
 }
 endif;
 
