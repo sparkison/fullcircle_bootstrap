@@ -18,7 +18,7 @@ if (!class_exists('better_admin_bar')) {
 		
 		function __construct(){
 			// translating strings
-			$mo = get_template_directory() . '/lib/languages/' . $this->domain . '-' . get_locale() . '.mo';
+			$mo = get_template_directory() . '/inc/languages/' . $this->domain . '-' . get_locale() . '.mo';
 			load_textdomain($this->domain, $mo);
 			// add plugin to menu
 			add_action( 'admin_menu', array( &$this, 'plugin_menu_link' ) );

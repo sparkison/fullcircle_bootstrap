@@ -288,12 +288,17 @@ add_action( 'wp_enqueue_scripts', 'fullcircle_bootstrap_scripts' );
 /**
  * Add Bootstrap navwalker
  */
-require_once(get_template_directory() . '/lib/wp_bootstrap_navwalker.php');
+require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
+
+/**
+ * Add Bootstrap pagination
+ */
+require_once(get_template_directory() . '/inc/wp_bootstrap_pagination.php');
 
 /**
  * Add Better Admin Bar
  */
-require_once(get_template_directory() . '/lib/better-admin-bar.php');
+require_once(get_template_directory() . '/inc/better-admin-bar.php');
 
 /**
  * Implement the Custom Header feature.
