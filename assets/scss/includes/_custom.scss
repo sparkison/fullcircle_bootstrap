@@ -30,3 +30,15 @@
 	font-family: FontAwesome;
 	content: "\f112\00a0\00a0";
 }
+
+/*
+ * Classes for Velcoty animated items
+ * Use visibility hidden instead of display none to prevent document flow issues
+ */
+.animation{
+	visibility: hidden;
+}
+.visible{
+	visibility: visible;
+}
+// End Velocity specific classes
