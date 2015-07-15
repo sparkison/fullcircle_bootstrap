@@ -86,7 +86,7 @@
 		uncss: {
 		  dist: {
 		    options: {
-		      	ignore			 : [/meta\..+/],
+		      	ignore			 : [/meta\..+/, 'visible'],
 						stylesheets  : ['assets/css/<%= pkg.name %>.min.css'],
 		      	//timeout    : 1000,
 		      	report       : 'min',
