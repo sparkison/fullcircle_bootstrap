@@ -12,3 +12,14 @@ Using [Grunt](http://gruntjs.com/installing-grunt) for SASS CSS and JS compilati
 
 - Edit **custom.js** file within the **/assets/js** folder and issue `grunt dist` commmand to compile into **/assets/js** as **fullcircle_bootstrap.min.js**. 
 - Edit **_custom.scss** file within the **/assets/scss** folder and issue `grunt dist` commmand to compile into **/assets/css** as **fullcircle_bootstrap.min.css**.
+
+Extras
+-----
+**1.** Added Bootstrap hover drop-down to package so Bootstrap drop-down menus will now expand on hover. Can set options in `inc/wp_bootstrap_navwalker.php` lines 85-91. Default is to stay open for 500 milliseconds after hover out.
+
+**2.** Can now easily animate in items when in viewport with [Velocity](https://github.com/julianshapiro/velocity) and jQuery [inview](https://github.com/protonet/jquery.inview). To use simply add the **animate** class to any element, with **data-animat=""** set to your favorite Velocity animation. When the element comes into the viewport, the velocity animation will be added (defaults to only run once). To run each time element comes into viewport, change `$(this).one` to `$(this).bind` on line 21 of `assets/custom.js`. Example useage: 
+```
+<div class="animation" data-animation="slideUpBigIn">
+  I will "slideUpBigIn" when I come into the viewport
+</div>
+```
