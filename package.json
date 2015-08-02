@@ -1,9 +1,9 @@
 {
   "name": "fullcircle_bootstrap",
-  "version": "1.2.0",
+  "version": "1.2.10",
   "description": "Custom WordPress theme developed by Shaun Parkison. Theme Based off of the _s WordPress theme by Automattic and Bootstrap by Twitter",
   "main": "index.php",
-  "copyright": "Shaun Parkison @ Full Circle Graphics, www.fullcirclegfx.com",
+  "copyright": "Shaun Parkison @ Bright Minded Media, http://www.brightmindedmedia.com/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "https://github.com/sparkison/fullcircle_bootstrap"
   },
-  "author": "Shaun Parkison at Full Circle Graphics",
+  "author": "Shaun Parkison at Bright Minded Media",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5",
