@@ -25,13 +25,13 @@
 				},
 				files: {'assets/js/<%= pkg.name %>.min.js' : 
 				[
-					'assets/js/custom.js',
+					'assets/js/dev/custom.js',
 				]}
 	  },
 			dist: {
 				files: {'assets/js/<%= pkg.name %>.min.js' : 
 				[
-					'assets/js/custom.js',
+					'assets/js/dev/custom.js',
 				]}
 			}
 	},
@@ -76,7 +76,7 @@
 				tasks: ['sass:dev']
 			},
 			js: {
-				files: ['assets/js/*.js', 'assets/js/vendor/*.js'],
+				files: ['assets/js/*.js', 'assets/js/dev/*.js', 'assets/js/vendor/*.js'],
 				tasks: ['uglify:dev']
 			}
 		},
