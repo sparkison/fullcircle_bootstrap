@@ -1,6 +1,6 @@
 /*
 
-  Custom js by Shaun Parkison @ fullcirclegfx.com
+  Custom js by Shaun Parkison @ brightmindedmedia.com
 
 */
 
