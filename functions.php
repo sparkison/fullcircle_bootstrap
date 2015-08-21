@@ -279,6 +279,7 @@ function fullcircle_bootstrap_scripts() {
 	wp_enqueue_style( 'twitter-bootstrap-style', $template_directory . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'font-awesome-style', $template_directory . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'fullcircle_bootstrap-custom-style', $template_directory . '/css/fullcircle_bootstrap.min.css' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 
 	// scripts
 	wp_enqueue_script( 'fullcircle_bootstrap-navigation', $template_directory . '/js/navigation.js', array(), '20150715', true );
