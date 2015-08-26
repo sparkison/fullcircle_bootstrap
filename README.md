@@ -25,3 +25,5 @@ Example useage:
   I will "slideUpBigIn" when I come into the viewport
 </div>
 ```
+
+**3.** Theme now includes baked-in minification of inline js/css and html. If you wish to remove this functionality simply uncomment/delete the `includes` line from ~line 308 in the `functions.php` file.
