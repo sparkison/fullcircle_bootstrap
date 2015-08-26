@@ -13,6 +13,19 @@ Using [Grunt](http://gruntjs.com/installing-grunt) for SASS CSS and JS compilati
 - Edit **custom.js** file within the **/assets/js/dev** folder and issue `grunt dist` commmand to compile into **/assets/js** as **fullcircle_bootstrap.min.js**. 
 - Edit **_custom.scss** file within the **/assets/scss** folder and issue `grunt dist` commmand to compile into **/assets/css** as **fullcircle_bootstrap.min.css**.
 
+How to use
+-----
+I created this WordPress+Bootstrap theme to make it easier to get started with custom theme development. This is not intended is an as-is theme, but instead as a starting point for your custom theme development.
+
+I've moved some things outside of WordPress to give more control over the scripts and stylesheets loaded to allow more control over the optimization of the theme.
+
+To configure:
+- Adding javascript files: if adding additional javascript libraries it is recommend to add them to the `assets/js` directory then add the library name to the `scripts` array within `Gruntfile.js`. This will ensure all javascript files are concatenated and compressed as a singular file.
+- Adding stylesheets: it is recommend to add stylesheets as `@import`'s within the `assets/scss/fullcircle_bootstrap.scss` file. This will ensure all stylsheets are concatenated and compressed as a singular file.
+- I've only added 2 stylsheets and 1 javascript file via the WordPress `enqueue` method within the `functions.php` file. This is to allow more flexibility in the optimization of the theme. The primary js and css file are outlined above. To compile them issue the `grunt dist` command, or simply issues `grunt watch` to have them automatically generated if actively making changes.
+
+Questions? Feel free to contact me via [email](shaun@brightmindedmedia.com) or [twitter](https://twitter.com/brightmindedweb).
+
 Extras
 -----
 **1.** Added Bootstrap hover drop-down to package so Bootstrap drop-down menus will now expand on hover. Can set options in `inc/wp_bootstrap_navwalker.php` lines 85-91. Default is to stay open for 500 milliseconds after hover out.
