@@ -276,12 +276,12 @@ function fullcircle_bootstrap_scripts() {
 	$template_directory = get_template_directory_uri() . '/assets';
 
 	// styles
-	wp_enqueue_style( 'fullcircle_bootstrap-custom-style', $template_directory . '/css/fullcircle_bootstrap.min.css' );
+	wp_enqueue_style( 'fullcircle_bootstrap', $template_directory . '/css/fullcircle_bootstrap.min.css' );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 
 	// scripts
-	wp_enqueue_script( 'fullcircle_bootstrap-custom', $template_directory . '/js/fullcircle_bootstrap.min.js', array( 'jquery' ), '20150715', true );
-	wp_enqueue_script( 'fullcircle_bootstrap-skip-link-focus-fix', $template_directory . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'fullcircle_bootstrap', $template_directory . '/js/fullcircle_bootstrap.min.js', array( 'jquery' ), '20150715', true );
+	wp_enqueue_script( 'skip-link-focus-fix', $template_directory . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
