@@ -7,7 +7,8 @@
  *
  * Sass CSS by Shaun Parkison @ brightmindedmedia.com
  * 0. General/Global styling
- * 1. ...
+ * 1. Infinite scroll
+ * 2. ...
  *
  */
 
@@ -43,3 +44,18 @@
 	visibility: visible;
 }
 // End Velocity specific classes
+
+/* * * * * * * * * * * * * *
+  1. INFINITE SCROLL
+ * * * * * * * * * * * * * */
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+

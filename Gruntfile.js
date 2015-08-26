@@ -7,6 +7,7 @@
 		'assets/js/jquery.inview.min.js',
 		'assets/js/velocity.min.js',
 		'assets/js/velocity.ui.min.js',
+		'assets/js/skip-link-focus-fix.js',
 		'assets/js/dev/custom.js'
 	];
 

@@ -281,7 +281,6 @@ function fullcircle_bootstrap_scripts() {
 
 	// scripts
 	wp_enqueue_script( 'fullcircle_bootstrap', $template_directory . '/js/fullcircle_bootstrap.min.js', array( 'jquery' ), '20150715', true );
-	wp_enqueue_script( 'skip-link-focus-fix', $template_directory . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
