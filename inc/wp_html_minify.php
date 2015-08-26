@@ -19,7 +19,7 @@ class WP_HTML_Compression {
 	    $compressed = strlen($compressed);		
 	    $savings = ($raw-$compressed) / $raw * 100;		
 	    $savings = round($savings, 2);		
-	    return '<!-- HTML Minify | http://fastwp.de/snippets/html-minify/ | Größe reduziert um '.$savings.'% | Von '.$raw.' Bytes, auf '.$compressed.' Bytes -->';
+	    return '<!-- HTML Minify | Saved '.$savings.'% | Before '.$raw.' Bytes, After '.$compressed.' Bytes -->';
     }
     protected function minifyHTML($html) {
 	    $pattern = '/<(?<script>script).*?<\/script\s*>|<(?<style>style).*?<\/style\s*>|<!(?<comment>--).*?-->|<(?<tag>[\/\w.:-]*)(?:".*?"|\'.*?\'|[^\'">]+)*>|(?<text>((<[^!\/\w.:-])?[^<]*)+)|/si';
