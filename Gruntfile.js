@@ -1,6 +1,15 @@
 	module.exports = function(grunt) {
 	// Project configuration.
 
+	scripts = [
+		'assets/js/bootstrap.min.js',
+		'assets/js/bootstrap-hover-dropdown.min.js',
+		'assets/js/jquery.inview.min.js',
+		'assets/js/velocity.min.js',
+		'assets/js/velocity.ui.min.js',
+		'assets/js/dev/custom.js'
+	];
+
 	/**
 	 * Uglify JS
 	 */
@@ -23,16 +32,10 @@
 					beautify: true,
 					mangle: false
 				},
-				files: {'assets/js/<%= pkg.name %>.min.js' : 
-				[
-					'assets/js/dev/custom.js',
-				]}
+				files: {'assets/js/<%= pkg.name %>.min.js' : scripts }
 	  },
 			dist: {
-				files: {'assets/js/<%= pkg.name %>.min.js' : 
-				[
-					'assets/js/dev/custom.js',
-				]}
+				files: {'assets/js/<%= pkg.name %>.min.js' : scripts }
 			}
 	},
 	/**

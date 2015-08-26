@@ -1,5 +1,11 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
+  /* IMPORTS */
+
 @import
-  "includes/custom";
+  "includes/custom",
+  "../css/bootstrap.min.css",
+  "../css/font-awesome.min.css";
+
+/* END IMPORTS */

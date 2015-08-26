@@ -276,19 +276,11 @@ function fullcircle_bootstrap_scripts() {
 	$template_directory = get_template_directory_uri() . '/assets';
 
 	// styles
-	wp_enqueue_style( 'twitter-bootstrap-style', $template_directory . '/css/bootstrap.min.css' );
-	wp_enqueue_style( 'font-awesome-style', $template_directory . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'fullcircle_bootstrap-custom-style', $template_directory . '/css/fullcircle_bootstrap.min.css' );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 
 	// scripts
-	wp_enqueue_script( 'bootstrap', $template_directory . '/js/bootstrap.min.js', array( 'jquery' ), '20150715', true );
-	wp_enqueue_script( 'bootstrap-hover-dropdown', $template_directory . '/js/bootstrap-hover-dropdown.min.js', array( 'jquery' ), '20150715', true );
-	wp_enqueue_script( 'jquery-inview', $template_directory . '/js/jquery.inview.min.js', array( 'jquery' ), '20150715', true );
-	wp_enqueue_script( 'velocity', $template_directory . '/js/velocity.min.js', array(), '20150715', true );
-	wp_enqueue_script( 'velocity-ui', $template_directory . '/js/velocity.ui.min.js', array(), '20150715', true );
-	wp_enqueue_script( 'fullcircle_bootstrap-custom', $template_directory . '/js/fullcircle_bootstrap.min.js', array(), '20150715', true );
-
+	wp_enqueue_script( 'fullcircle_bootstrap-custom', $template_directory . '/js/fullcircle_bootstrap.min.js', array( 'jquery' ), '20150715', true );
 	wp_enqueue_script( 'fullcircle_bootstrap-skip-link-focus-fix', $template_directory . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
