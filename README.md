@@ -26,4 +26,4 @@ Example useage:
 </div>
 ```
 
-**3.** Theme now includes baked-in minification of inline js/css and html. If you wish to remove this functionality simply uncomment/delete the `includes` line from ~line 308 in the `functions.php` file.
+**3.** Theme now includes baked-in minification of inline js/css and html. If you wish to remove this functionality simply uncomment/delete the `require` line from ~line 308 in the `functions.php` file.
