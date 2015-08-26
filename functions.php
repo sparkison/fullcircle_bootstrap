@@ -303,6 +303,11 @@ require_once(get_template_directory() . '/inc/wp_bootstrap_pagination.php');
 require_once(get_template_directory() . '/inc/better-admin-bar.php');
 
 /**
+ * Include minification class.
+ */
+require get_template_directory() . '/inc/wp_html_minify.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
