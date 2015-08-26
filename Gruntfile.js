@@ -1,6 +1,9 @@
 	module.exports = function(grunt) {
 	// Project configuration.
 
+	/**
+	 * Scripts to load, concat, and minify
+	 */
 	scripts = [
 		'assets/js/bootstrap.min.js',
 		'assets/js/bootstrap-hover-dropdown.min.js',
