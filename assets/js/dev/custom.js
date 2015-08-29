@@ -16,7 +16,7 @@
 		 * 	Example: <div class="animation" data-animation="slideUpBigIn">
 		 */
 		$(function() {
-			$('.animate').each(function() {
+			$('.velocity-animation').each(function() {
 				// Only animate once, if want to call each time in view, change 'one' to 'bind'
 				$(this).one('inview', function(event, isInView, visiblePartX, visiblePartY) {
   					if (isInView) {

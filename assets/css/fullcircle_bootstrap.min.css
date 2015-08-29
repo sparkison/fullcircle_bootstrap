@@ -7,5 +7,5 @@
  * Copyright Shaun Parkison @ Bright Minded Media, http://www.brightmindedmedia.com/
  */
 
-@import url(../css/bootstrap.min.css);@import url(../css/font-awesome.min.css);.gravatar{display:block;float:left;padding-right:12px}.gravatar img{-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px}.comment-reply-link:before{font-family:FontAwesome;content:"\f112\00a0\00a0"}.animation{visibility:hidden}.visible{visibility:visible}.infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}.infinity-end.neverending .site-footer{display:block}
+@import url(../css/bootstrap.min.css);@import url(../css/font-awesome.min.css);.gravatar{display:block;float:left;padding-right:12px}.gravatar img{-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px}.comment-reply-link:before{font-family:FontAwesome;content:"\f112\00a0\00a0"}.velocity-animation{visibility:hidden}.visible{visibility:visible}.infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}.infinity-end.neverending .site-footer{display:block}
 /*# sourceMappingURL=fullcircle_bootstrap.min.css.map */
